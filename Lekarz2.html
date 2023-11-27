@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wizyta u lekarza</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/rezerwacja.css">
+    <link rel="stylesheet" type="text/css" href="styles/calendar.css"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.js"></script>
+    <script src="calendar.js"></script>
+    <script src="rezerwacja.js"></script>
+    <script src="style.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <div class="clinic-logo">
+                <img src="img/logo.png" alt="Logo Przychodni" onclick="window.location.href='start.html'">
+            </div>
+            <div class="clinic-name">
+                <h1>LekMed</h1>
+            </div>
+        </div>
+    </header>
+    <style>
+      h4 {
+        color:#582cb0;
+      }
+     
+    
+    
+      
+    </style>
+        <nav>
+            <ul>
+                <li><a href="lekarze.html">Nasi lekarze</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="o-nas.html">O nas</a></li>
+                <li><a href="oferta.html">Oferta</a></li>
+                <li><a href="kalendarz.html">Kalendarz</a></li>
+            </ul>
+        </nav>
+        <h1>Rezerwacja wizyty</h1>
+    
+        <center><div class="doctors" id="doctor-details">
+            <div class="this-doctor">
+            <img class="doctor-image" src="img/lek2.jpg" alt="Dr. Anna Nowak">
+            <h3>Dr. Anna Nowak</h3>
+            <p>Pediatra</p>
+            <p>Dni pracy: środy, piątki</p>
+            </div></center>
+        </div>
+    
+      </br>
+        <center><h3>Grudzień 2023</h3></center>
+        <center>  <table id="calendar">
+          <tr>
+            <th class="day-name">Poniedziałek</th>
+            <th class="day-name">Wtorek</th>
+            <th class="day-name">Środa</th>
+            <th class="day-name">Czwartek</th>
+            <th class="day-name">Piątek</th>
+            <th class="day-name">Sobota</th>
+            <th class="day-name">Niedziela</th>
+          </tr>
+          <tr>
+            <td class="other_month"><span class="number">27</span></td>
+            <td class="other_month"><span class="number">28</span>
+             
+              </td>
+            <td class="other_month"><span class="number">29</span></td>
+            <td class="day today">
+              <span class="number">30</span>
+                
+            </td>
+            <td class="day"><span class="number">1</span> 
+              <div class="event_app">
+                <div class="hour" onclick="handleCalendarClick('20', '12', '2023', '08:00')">08:00</div>
+                
+                <div>
+                </td>         
+            <td class="weekend"><span class="number">2</span></span></td>
+            <td class="weekend"><span class="number" >3</span></span></td>
+          </tr>
+          <tr>
+            <td class="day">
+              <span class="number">4</span>
+            
+            </td>
+            <td class="day" id="lekarzCell"><span class="number">5</span></span>
+              </td>
+            <td class="day"><span class="number">6</span>
+              <div class="event_app">
+                <div class="hour" onclick="handleCalendarClick('6', '12', '2023', '13:15')">13:15</div>
+                <div class="hour" onclick="handleCalendarClick('6', '12', '2023', '14:45')">14:45</div>
+                <div class="hour" onclick="handleCalendarClick('6', '12', '2023', '15:00')">15:00</div>
+                <div></td>
+            <td class="day"><span class="number">7</span>
+              
+          
+        
+        </td>
+            <td class="niedostepne"><span class="number">8</span>
+              <div class="popup" onclick="brak1()">
+                Brak terminów
+                <span class="popuptext" id="myPopup">Brak terminów w danym dniu.</span>
+              </div>
+        </td>
+            <td class="weekend"><span class="number">9</span>
+            
+            </td>
+            <td class="weekend"><span class="number">10</span></td>
+          </tr>
+          <tr>
+            <td class="day"><span class="number">11</span>
+              </td>
+              <td class="day"><span class="number">12</span>
+              </td>
+            <td class="niedostepne"><span class="number">13</span></span>
+              <div class="popup" onclick="brak1()">
+                Brak terminów
+                <span class="popuptext" id="myPopup">Brak terminów w danym dniu.</span>
+              </div>
+            </td>
+            <td class="day"><span class="number">14</span></span>
+              </td>
+            <td class="day"><span class="number">15</span>
+              <div class="event_app">
+                <div class="hour" onclick="handleCalendarClick('15', '12', '2023', '15:15')">15:15</div>
+              
+          </div></td>
+            <td class="weekend"><span class="number">16</span></td>
+            <td class="weekend"><span class="number">17</span></td>
+          </tr>
+          <tr>
+            <td class="day"><span class="number">18</span>
+              </td>
+            <td class="day"><span class="number">19</span>
+              </td>
+            <td class="day"><span class="number">20</span>
+              <div class="event_app">
+          <div class="hour" onclick="handleCalendarClick('20', '12', '2023', '13:15')">13:15</div>
+          <div class="hour" onclick="handleCalendarClick('20', '12', '2023', '14:45')">14:45</div>
+          <div class="hour" onclick="handleCalendarClick('20', '12', '2023', '15:00')">15:00</div>
+          <div>
+      </td>
+      <td class="day"><span class="number">21</span>
+      </td>
+            <td class="day"><span class="number">22</span>
+              <div class="event_app">
+              <div class="hour" onclick="handleCalendarClick('22', '12', '2023', '13:15')">13:15</div>
+          <div class="hour" onclick="handleCalendarClick('22', '12', '2023', '14:45')">14:45</div>
+          <div class="hour" onclick="handleCalendarClick('22', '12', '2023', '15:00')">15:00</div><div></td>
+            
+            <td class="weekend"><span class="number">23</span></td>
+            <td class="weekend"><span class="number">24</span></td>
+          </tr>
+          <tr>
+            <td class="day"><span class="number">25</span>
+              
+            </td>
+            <td class="day"><span class="number">26</span>
+          </td>
+              <td class="niedostepne"><span class="number">27</span>
+                <div class="popup" onclick="brak1()">
+                  Brak terminów
+                  <span class="popuptext" id="myPopup">Brak terminów w danym dniu.</span>
+                </div></td>
+            <td class="day"><span class="number">28</span>
+              
+          </td>
+            
+              <td class="niedostepne"><span class="number">29</span>
+                <div class="popup" onclick="brak1()">
+                  Brak terminów
+                  <span class="popuptext" id="myPopup">Brak terminów w danym dniu.</span>
+                </div>
+          </td>
+          </td>
+            
+            <td class="weekend"><span class="number">30</span></td>
+            <td class="weekend"><span class="number">31</span></td>
+          </tr>
+         
+        </table>
+        </br>
+          <center><h3>Podaj termin i rodzaj wizyty:</h3></center>
+    
+          <form id="appointmentForm">
+            <div>
+              <label for="doctor">Twój lekarz:</label>
+              <select id="doctorInfo">
+                <option value="Anna Nowak, pediatra">Anna Nowak</option>
+            </select>
+          </div>
+            <div>
+                <label for="appointmentDate">Data wizyty:</label>
+                <input type="date" id="appointmentDate" required onchange="highlightForm()">
+            </div>
+            <div>
+                <label for="appointmentTime">Godzina wizyty:</label>
+                <input type="time" id="appointmentTime"  min="08:00" max="18:00" step="900" required>
+            </div>
+            <div>
+                <label for="appointmentDescription">Opis wizyty:</label>
+                <select id="purpose-list">
+                    <option value="Wizyta kontrolna, 100zł">Wizyta kontrolna</option>
+                    <option value="Konsultacja, 80zł">Konsultacja</option>
+                    <option value="Choroba, 120zł">Choroba</option>
+                    <option value="Wypisanie recepty, 40zł">Wypisanie recepty</option>
+                    <option value="Szczepienie, 60zł">Szczepienie</option>
+                </select>
+            </div>
+            <div>
+               <center> <button class="button" type="button" onclick="saveAppointment()">Dodaj wizytę</button> </center>
+            </div>
+        </form>
+    
+    
+        
+    
+        <div id="service-prices">
+            <h2>Cennik usług:</h2>
+            <ul>
+                <li id="purpose1">Wizyta kontrolna - 100 zł</li>
+                <li id="purpose2">Konsultacja - 80 zł</li>
+                <li id="purpose3">Choroba - 120 zł</li>
+                <li id="purpose4">Wypisanie recepty - 40 zł</li>
+                <li id="purpose5">Szczepienie - 60 zł</li>
+            </br>
+            <h4>*Płatność tylko w placówce!<h4>
+            </ul>
+        </div>
+      </center> 
+    </br>
+    <footer>
+      <small>
+        Copyright © 2023 Patryja Oświęcimska, Kinga Spytkowska
+      </small>
+    </footer>
+    </body>
+        <script>
+          document.addEventListener('DOMContentLoaded', function () {
+            var availableDates = ["2023-12-01", "2023-12-06", "2023-12-15", "2023-12-20", "2023-12-22"]; // Lista dostępnych dat
+    
+            var appointmentDateInput = document.getElementById('appointmentDate');
+    
+            appointmentDateInput.addEventListener('input', function() {
+              var selectedDate = appointmentDateInput.value;
+    
+              if (!isValidDate(selectedDate) || !isAvailableDate(selectedDate)) {
+                alert('Proszę wybrać poprawną datę z dostępnych opcji.');
+                appointmentDateInput.value = ''; // W przypadku nieprawidłowej daty usuń wartość
+              }
+            });
+    
+            function isValidDate(dateString) {
+              var regex = /^\d{4}-\d{2}-\d{2}$/;
+              return dateString.match(regex) !== null;
+            }
+    
+            function isAvailableDate(date) {
+              return availableDates.includes(date);
+            }
+          });
+    
+
+          function saveAppointment() {
+            var appointment = {
+                date: document.getElementById('appointmentDate').value,
+                time: document.getElementById('appointmentTime').value,
+                purpose: document.getElementById('purpose-list').value,
+                doctor: document.getElementById('doctorInfo').value
+            };
+    
+            // Pobierz aktualną listę wizyt z Local Storage lub utwórz nową, jeśli nie istnieje
+            var appointmentsList = JSON.parse(localStorage.getItem('appointments')) || [];
+            
+            // Dodaj nową wizytę do listy
+            appointmentsList.push(appointment);
+    
+            // Zapisz listę wizyt z powrotem do Local Storage
+            localStorage.setItem('appointments', JSON.stringify(appointmentsList));
+    
+            // Przenieś użytkownika na stronę "rezerwacja.html"
+            window.location.href = 'rezerwacja.html';}
+        </script>
+    
+    </body>
+    
+    </html>

@@ -1,0 +1,169 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+    color: #023746;
+}
+
+h2 {
+    text-align: center;
+    font-size: 12px;
+    color: #0d3f44;
+}
+
+header {
+    background-color: #a5c5cf;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+.appointmentForm{
+    font-size: 19px;
+    background-color: #cae5eb;
+}
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.clinic-logo img {
+    max-width: 100px;
+    max-height: 150px;
+
+}
+
+.clinic-name h1 {
+    font-size: 28px;
+    margin-left: 10px;
+}
+
+
+nav ul {
+    list-style-type: none;
+    text-align: left;
+    background-color: #044f63;
+    padding: 10px;
+}
+.button {
+    background-image: linear-gradient(#044f63, #74858a);
+    border: 1px solid #cbd2d4;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    direction: ltr;
+    display: block;
+    font-family: "SF Pro Text","SF Pro Icons","AOS Icons","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: -.022em;
+    line-height: 1.47059;
+    min-width: 30px;
+    overflow: visible;
+    padding: 4px 15px;
+    text-align: center;
+    vertical-align: baseline;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+  }
+
+  .starButton:before {
+    content: '\2605'; /* Unicode character for a solid star */
+    font-size: 24px;
+    color: #ffcc00;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .star-button:hover {
+    background-color: #2980b9;
+  }
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Karty lekarzy */
+.doctor-card {
+    background-color: rgb(82, 167, 186, 0.2);;
+    border: 3px solid #4495ab;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    max-width: 300px; 
+    flex: 1; 
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.doctor-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.doctors {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+}
+
+h2 {
+    font-size: 25px;
+    margin: 10px 0;
+    color: #333;
+}
+
+p {
+    margin: 10px 0;
+    text-align: center;
+    color: #666;
+}
+
+footer {
+    text-align: center;
+    padding: 5px;
+    background-color: #044f63;
+    color: #000;
+    margin-top: auto;
+  }
+
+.availability {
+    font-weight: bold;
+    color: #00a0e4;
+}
+
+.highlighted {
+    border: 2px solid orange;
+    background-color: #f0d1d1;
+}
